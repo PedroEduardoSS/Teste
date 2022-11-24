@@ -1,6 +1,6 @@
 package model;
 
-public class Budget extends Price{
+public class Budget extends Product{
     private String title;
     private String description;
     private String nameUser;
@@ -59,8 +59,13 @@ public class Budget extends Price{
     }
 
     // Methods
+    public double multiplyPrice(){
+        this.price = price*qtd_product;
+        return this.price;
+    }
+    
     @Override
     public String toString(){
-        return "Titulo: "+this.title+", Descricao: "+this.description+", Preco: "+this.value;
+        return "Titulo: "+this.title+", Descricao: "+this.description+", Preco: "+this.price;
     }
 }

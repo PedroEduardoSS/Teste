@@ -36,7 +36,7 @@ public class ControllerBudget {
         }
     }
 
-    public void updateBudget(Budget budget, String data, int qtd, double value, int setAt ){
+    public void updateBudget(Budget budget, String data, int qtd, double price, int setAt ){
         for (Budget o : budgets){
             if (o == budget){
                 switch (setAt) {
@@ -69,7 +69,7 @@ public class ControllerBudget {
                         break;
 
                     default:
-                        o.setValue(value);
+                        o.setPrice(price);
                         break;
                 }
                 System.out.println(o);

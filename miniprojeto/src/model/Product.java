@@ -1,7 +1,7 @@
 package model;
 
-public class Price {
-    protected double value;
+abstract class Product {
+    protected double price;
     protected boolean product;
     protected int qtd_product;
     
@@ -13,13 +13,13 @@ public class Price {
     } */
     
 
-    public double getValue() {
-        return value;
+    public double getPrice() {
+        return price;
     }
 
 
-    public void setValue(double value) {
-        this.value = value;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
 
@@ -42,11 +42,7 @@ public class Price {
         this.qtd_product = qtd_product;
     }
     
-
     // Methods
-    public double multiplyPrice(){
-        this.value = value*qtd_product;
-        return this.value;
-    }
+    abstract double multiplyPrice();
 
 }
