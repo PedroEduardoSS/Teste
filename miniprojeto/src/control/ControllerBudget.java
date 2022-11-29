@@ -68,11 +68,14 @@ public class ControllerBudget {
                         o.setQtd_product(qtd);
                         break;
 
-                    default:
+                    case 7:
                         o.setPrice(price);
                         break;
+
+                    default:
+                        System.out.println("Nada alterado");
+                        break;
                 }
-                System.out.println(o);
             }
         }
     }

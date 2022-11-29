@@ -60,12 +60,14 @@ public class Budget extends Product{
 
     // Methods
     public double multiplyPrice(){
-        this.price = price*qtd_product;
+        if (isProduct() == true) {
+            this.price = price*getQtd_product();
+        }
         return this.price;
     }
     
     @Override
     public String toString(){
-        return "Titulo: "+this.title+", Descricao: "+this.description+", Preco: "+this.price;
+        return "Titulo: "+this.title+", Descricao: "+this.description+", Preco: R$"+String.format("%.2f", this.price)+", Cliente: "+this.nameUser;
     }
 }

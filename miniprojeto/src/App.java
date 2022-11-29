@@ -24,6 +24,19 @@ public class App {
         ctrluser.readUsers();
         //ctrluser.updateUser(user, "11111111", 0);
 
-        //System.out.println();
+       Budget bud = new Budget();
+       ControllerBudget ctrlbud = new ControllerBudget();
+
+       bud.setTitle("Carro");
+       bud.setDescription("Miniaturas diecast");
+       bud.setProduct(true);
+       bud.setQtd_product(2);
+       bud.setNameUser("pedro");
+       bud.setIdUser("00000000");
+       bud.setPrice(50000);
+
+       ctrlbud.createBudget(bud);
+
+       ctrlbud.readBudgets();
     }
 }
