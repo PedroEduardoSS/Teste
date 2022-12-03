@@ -1,6 +1,6 @@
 package model;
 
-public class Budget extends Product{
+public class Budget extends Service{
     private String title;
     private String description;
     private String nameUser;

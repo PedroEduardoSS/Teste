@@ -1,17 +1,9 @@
 package model;
 
-abstract class Product {
+abstract class Service {
     protected double price;
     protected boolean product;
     protected int qtd_product;
-    
-    /*
-    protected Price(double value, boolean product, int qtd_product){
-        this.value = value;
-        this.product = product;
-        this.qtd_product = qtd_product;
-    } */
-    
 
     public double getPrice() {
         return price;
