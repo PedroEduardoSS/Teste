@@ -5,20 +5,12 @@ import model.Budget;
 
 public class ControllerBudget {
     private HashSet<Budget> budgets;
-    //private int qtd_budgets;
 
     public ControllerBudget() {
         budgets = new HashSet<Budget>();
-        //qtd_budgets = 0;
     }
 
     public void createBudget(Budget budget){
-        /*try {
-            budgets[qtd_budgets] = budget;
-            qtd_budgets ++;
-        } catch (Exception e) {
-            System.out.println("Número de orçamentos excedido");
-        } */
         budgets.add(budget);
     }
     
@@ -36,7 +28,7 @@ public class ControllerBudget {
         }
     }
 
-    public void updateBudget(Budget budget, String data, int qtd, double price, int setAt ){
+    public void updateBudget(Budget budget, String data, int setAt ){
         for (Budget o : budgets){
             if (o == budget){
                 switch (setAt) {
@@ -65,11 +57,13 @@ public class ControllerBudget {
                         break;
                     
                     case 6:
-                        o.setQtd_product(qtd);
+                        int intData = Integer.valueOf(data);
+                        o.setQtd_product(intData);
                         break;
 
                     case 7:
-                        o.setPrice(price);
+                        double doubleData = Double.valueOf(data);
+                        o.setPrice(doubleData);
                         break;
 
                     default:

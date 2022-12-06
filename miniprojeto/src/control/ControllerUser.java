@@ -5,20 +5,12 @@ import model.User;
 
 public class ControllerUser {
     private HashSet<User> users;
-    //private int qtd_users;
 
     public ControllerUser() {
         users = new HashSet<User>();
-        //qtd_users = 0;
     }
 
     public void createUser(User user){
-        /*try {
-            users[qtd_users] = user;
-            qtd_users ++;
-        } catch (Exception e) {
-            System.out.println("Número de usuarios excedido");
-        }*/
         users.add(user);
     }
 
