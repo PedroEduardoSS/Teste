@@ -47,7 +47,7 @@ public class Budget extends Service{
 
     // Methods
     public double multiplyPrice(){
-        if (isProduct() == true) {
+        if (isProduct() == true && getQtd_product() > 1) {
             this.price = price*getQtd_product();
         }
         return this.price;

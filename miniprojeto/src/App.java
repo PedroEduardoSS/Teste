@@ -24,19 +24,21 @@ public class App {
         ctrluser.readUsers();
         //ctrluser.updateUser(user, "11111111", 0);
 
-       Budget bud = new Budget();
-       ControllerBudget ctrlbud = new ControllerBudget();
+        Budget bud = new Budget();
+        ControllerBudget ctrlbud = new ControllerBudget();
 
-       bud.setTitle("Carro");
-       bud.setDescription("Miniaturas diecast");
-       bud.setProduct(true);
-       bud.setQtd_product(2);
-       bud.setNameUser("pedro");
-       bud.setIdUser("00000000");
-       bud.setPrice(50000);
+        bud.setTitle("Carro");
+        bud.setDescription("Miniaturas diecast");
+        bud.setProduct(true);
+        bud.setQtd_product(2);
+        bud.setNameUser("pedro");
+        bud.setIdUser("00000000");
+        bud.setPrice(50000);
+        bud.multiplyPrice();
 
-       ctrlbud.createBudget(bud);
+        ctrlbud.createBudget(bud);
 
-       ctrlbud.readBudgets();
+        ctrlbud.readBudgets();
+        ctrlbud.readBudget(null);
     }
 }
