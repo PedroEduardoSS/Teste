@@ -6,19 +6,6 @@ public class Budget extends Service{
     private String nameUser;
     private String idUser;
     
-    // Constructor
-    /*
-    public Budget(String title, String description, String nameUser, String idUser, double value, boolean product, int qtd_product) {
-        super(value, product, qtd_product);
-        this.title = title;
-        this.description = description;
-        this.idUser = idUser;
-        this.nameUser = nameUser;
-        this.value = value;
-        this.product = product;
-        this.qtd_product = qtd_product;
-    } */
-    
     public String getTitle() {
         return title;
     }

@@ -5,15 +5,6 @@ public class User {
     private String email;
     private String id;
     
-    // Constructor
-    /*
-    public User(String name, String email, String id) {
-        this.name = name;
-        this.email = email;
-        this.id = id;
-    }*/
-    
-
     public String getName() {
         return name;
     }
