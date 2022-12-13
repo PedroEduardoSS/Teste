@@ -39,6 +39,11 @@ public class App {
         ctrlbud.createBudget(bud);
 
         ctrlbud.readBudgets();
-        ctrlbud.readBudget(null);
+
+        //ctrlbud.updateBudget(bud, "3", 6);
+        //ctrlbud.updateBudget(bud, "200", 7);
+        ctrlbud.readBudget("00000000");
+        ctrlbud.deleteBudget(bud, "00000000");
+        ctrlbud.readBudgets();
     }
 }
