@@ -59,11 +59,13 @@ public class ControllerBudget {
                     case 6:
                         int intData = Integer.valueOf(data);
                         o.setQtd_product(intData);
+                        o.multiplyPrice();
                         break;
 
                     case 7:
                         double doubleData = Double.valueOf(data);
                         o.setPrice(doubleData);
+                        o.multiplyPrice();
                         break;
 
                     default:
