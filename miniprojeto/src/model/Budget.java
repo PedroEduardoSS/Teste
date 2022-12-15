@@ -55,6 +55,7 @@ public class Budget extends Service{
     
     @Override
     public String toString(){
-        return "Titulo: "+this.title+", Descricao: "+this.description+", Preco: R$"+String.format("%.2f", this.price)+", Cliente: "+this.nameUser;
+        return "Titulo: "+this.title+", Descricao: "+this.description+
+        ", Preco: R$"+String.format("%.2f", this.price)+", Cliente: "+this.nameUser;
     }
 }

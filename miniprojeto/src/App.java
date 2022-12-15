@@ -19,13 +19,13 @@ public class App {
         user1.setId("00000000");
         ctrluser.createUser(user1);
 
-        ctrluser.readUsers();
+        ctrluser.readUser("00000000");
+        ctrluser.updateUser(user, "00000000", 0);
         ctrluser.deleteUser(user, "123124235");
         ctrluser.readUsers();
-        //ctrluser.updateUser(user, "11111111", 0);
 
-        Budget bud = new Budget();
         ControllerBudget ctrlbud = new ControllerBudget();
+        Budget bud = new Budget();
 
         bud.setTitle("Carro");
         bud.setDescription("Miniaturas diecast");
@@ -37,12 +37,8 @@ public class App {
         bud.multiplyPrice();
 
         ctrlbud.createBudget(bud);
-
-        ctrlbud.readBudgets();
-
-        //ctrlbud.updateBudget(bud, "3", 6);
-        //ctrlbud.updateBudget(bud, "200", 7);
         ctrlbud.readBudget("00000000");
+        ctrlbud.updateBudget(bud, "Novo titulo", 1);
         ctrlbud.deleteBudget(bud, "00000000");
         ctrlbud.readBudgets();
     }
