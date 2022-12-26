@@ -7,21 +7,21 @@ public class ControllerUser {
     private HashSet<User> users;
 
     public ControllerUser() {
-        users = new HashSet<User>();
+        this.users = new HashSet<User>();
     }
 
     public void createUser(User user){
-        users.add(user);
+        this.users.add(user);
     }
 
     public void readUsers(){
-        for (User i : users){
+        for (User i : this.users){
             System.out.println(i);
         }
     }
 
     public void readUser(String idUser){
-        for (User o : users){
+        for (User o : this.users){
             if (o.getId() == idUser){
                 System.out.println(o);
             }
@@ -29,7 +29,7 @@ public class ControllerUser {
     }
 
     public void updateUser(User user, String data, int setAt){
-        for (User o : users){
+        for (User o : this.users){
             if (o == user){
                 switch (setAt) {
                     case 1:
@@ -46,12 +46,13 @@ public class ControllerUser {
                 }
                 System.out.println(o);
             }
+            break;
         }
     }
 
     public void deleteUser(User user, String idUser){
         if (user.getId() == idUser){
-            users.remove(user);
+            this.users.remove(user);
         }
     }
 }

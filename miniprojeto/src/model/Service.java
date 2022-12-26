@@ -1,40 +1,22 @@
 package model;
 
-abstract class Service {
-    protected double price;
-    protected boolean product;
-    protected int qtd_product;
+public class Service extends Item{
+    private int deadline;
 
-    public double getPrice() {
-        return price;
+    public int getDeadline() {
+        return deadline;
     }
 
-
-    public void setPrice(double price) {
-        this.price = price;
+    public void setDeadline(int deadline) {
+        this.deadline = deadline;
     }
 
-
-    public boolean isProduct() {
-        return product;
-    }
-
-
-    public void setProduct(boolean product) {
-        this.product = product;
-    }
-
-
-    public int getQtd_product() {
-        return qtd_product;
-    }
-
-
-    public void setQtd_product(int qtd_product) {
-        this.qtd_product = qtd_product;
-    }
-    
+        
     // Methods
-    abstract double multiplyPrice();
+    @Override
+    public String toString(){
+        return "Nome do item: "+this.nameItem+", Info: "+this.info+"Prazo: "+getDeadline()+
+        ", Preco: R$"+String.format("%.2f", this.price);
+    }
 
 }
