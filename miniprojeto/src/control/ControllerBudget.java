@@ -1,6 +1,7 @@
 package control;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import model.Budget;
 
 public class ControllerBudget {
@@ -10,7 +11,8 @@ public class ControllerBudget {
         this.budgets = new HashSet<Budget>();
     }
 
-    public void createBudget(Budget budget){
+    public void createBudget(){
+        Budget budget = new Budget();
         this.budgets.add(budget);
     }
     
@@ -28,9 +30,9 @@ public class ControllerBudget {
         }
     }
 
-    public void updateBudget(Budget budget, String data, int setAt ){
+    public void updateBudget(String idUser, String data, int setAt ){
         for (Budget o : this.budgets){
-            if (o == budget){
+            if (o.getUser().getId() == idUser){
                 switch (setAt) {
                     case 1:
                         o.setTitle(data);
@@ -48,9 +50,13 @@ public class ControllerBudget {
         }
     }
 
-    public void deleteBudget(Budget budget, String idUser){
-        if (budget.getUser().getId() == idUser){
-            this.budgets.remove(budget);
+    public void deleteBudget(String idUser){
+        Iterator<Budget> it = budgets.iterator();
+        while(it.hasNext()) {
+            Budget i = it.next();
+            if(i.getUser().getId() == idUser) {
+                it.remove();
+            }
         }
     }
 }

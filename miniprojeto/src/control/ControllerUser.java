@@ -1,6 +1,7 @@
 package control;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import model.User;
 
 public class ControllerUser {
@@ -10,7 +11,8 @@ public class ControllerUser {
         this.users = new HashSet<User>();
     }
 
-    public void createUser(User user){
+    public void createUser(){
+        User user = new User();
         this.users.add(user);
     }
 
@@ -28,9 +30,9 @@ public class ControllerUser {
         }
     }
 
-    public void updateUser(User user, String data, int setAt){
+    public void updateUser(String idUser, String data, int setAt){
         for (User o : this.users){
-            if (o == user){
+            if (o.getId() == idUser){
                 switch (setAt) {
                     case 1:
                         o.setName(data);
@@ -50,9 +52,13 @@ public class ControllerUser {
         }
     }
 
-    public void deleteUser(User user, String idUser){
-        if (user.getId() == idUser){
-            this.users.remove(user);
+    public void deleteUser(String idUser){
+        Iterator<User> it = users.iterator();
+        while(it.hasNext()) {
+            User i = it.next();
+            if(i.getId() == idUser) {
+                it.remove();
+            }
         }
     }
 }
