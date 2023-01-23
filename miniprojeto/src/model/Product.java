@@ -3,6 +3,13 @@ package model;
 public class Product extends Item{
     private int quantity;
 
+    public Product(String nameItem, String info, double price, int quantity){
+        this.nameItem = nameItem;
+        this.info = info;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
     public int getQuantity() {
         return quantity;
     }
@@ -21,7 +28,7 @@ public class Product extends Item{
 
     @Override
     public String toString(){
-        return "Nome do item: "+this.nameItem+", Info: "+this.info+"Quantidade: "+getQuantity()+
+        return "Nome do item: "+this.nameItem+", Info: "+this.info+", Quantidade: "+getQuantity()+
         ", Preco: R$"+String.format("%.2f", this.price);
     }
 

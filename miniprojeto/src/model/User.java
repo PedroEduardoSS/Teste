@@ -5,6 +5,12 @@ public class User {
     private String email;
     private String id;
     
+    public User(String id, String name, String email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+    }
+
     public String getName() {
         return name;
     }
@@ -33,6 +39,6 @@ public class User {
     // Methods
     @Override
     public String toString(){
-        return "Nome: "+this.name+", Email: "+this.email+", Id: "+this.id;
+        return "Id: "+this.id+", Nome: "+this.name+", Email: "+this.email;
     }
 }

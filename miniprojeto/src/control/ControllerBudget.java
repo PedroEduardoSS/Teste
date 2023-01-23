@@ -1,33 +1,36 @@
 package control;
 
-import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.Iterator;
-import model.Budget;
+import model.*;
 
 public class ControllerBudget {
-    private HashSet<Budget> budgets;
+    private ArrayList<Budget> budgets;
+    //private ArrayList<Product> products;
+    //private ArrayList<Service> services;
 
     public ControllerBudget() {
-        this.budgets = new HashSet<Budget>();
+        this.budgets = new ArrayList<Budget>();
+        //this.products = new ArrayList<Product>();
+        //this.services = new ArrayList<Service>();
     }
 
-    public void createBudget(){
-        Budget budget = new Budget();
+    public Budget createBudget(String id, String title, ArrayList<Product> products, ArrayList<Service> services, String idUser,
+    String name, String email){
+        Budget budget = new Budget(id, title, products, services, idUser, name, email);
         this.budgets.add(budget);
-    }
-    
-    public void readBudgets(){
-        for (Budget i : this.budgets){
-            System.out.println(i);
-        }
+        return budget;
     }
 
-    public void readBudget(String idUser){
+    public String readBudget(String idUser){
+        
+        String str = "";
         for (Budget o : this.budgets){
             if (o.getUser().getId() == idUser){
-                System.out.println(o);
+                str = String.valueOf(o);
             }
         }
+        return str;
     }
 
     public void updateBudget(String idUser, String data, int setAt ){
@@ -39,6 +42,7 @@ public class ControllerBudget {
                         break;
                     
                     case 2:
+                        o.setId(data);
                         break;
 
                     default:

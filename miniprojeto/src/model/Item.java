@@ -1,17 +1,10 @@
 package model;
 
 abstract class Item {
-    protected String idItem;
     protected String nameItem;
     protected String info;
     protected double price;
 
-    public String getIdItem() {
-        return idItem;
-    }
-    public void setIdItem(String idItem) {
-        this.idItem = idItem;
-    }
     public String getNameItem() {
         return nameItem;
     }

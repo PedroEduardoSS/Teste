@@ -3,36 +3,34 @@ package view;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import model.*;
+import control.*;
 
 public class Menu extends JFrame implements ActionListener {
 	private static JLabel title = new JLabel("Menu Principal");
 	private static JPanel panel = new JPanel();
-	private static JButton button1 = new JButton("Usuarios");
-	private static JButton button2 = new JButton("Orçamentos");
-	private static JButton button3 = new JButton("Itens");
+	private static JButton usersBtn = new JButton("Usuarios");
+	private static JButton budgetsBtn = new JButton("Orçamentos");
+	
     
     public Menu() {
         title.setFont(new Font("Arial", Font.BOLD, 20));
-		title.setBounds(410, 10, 750, 30);
+		title.setBounds(250, 10, 700, 30);
 
-		//panel.setPreferredSize(new Dimension(900, 25));
-		panel.setBounds(100, 50, 750, 50);
+		panel.setBounds(0, 50, 650, 50);
 
-		button1.setBounds(10, 100, 150, 20);
-		button1.addActionListener(this);
-		button2.setBounds(200, 100, 150, 20);
-		button2.addActionListener(this);
-		button3.setBounds(400, 100, 150, 20);
-		button3.addActionListener(this);
+		usersBtn.setSize(new Dimension(30, 20));
+		usersBtn.addActionListener(this);
+		budgetsBtn.setSize(new Dimension(30, 20));
+		budgetsBtn.addActionListener(this);
 		
 	    this.setLayout(null);
 		
-		panel.add(button1);
-		panel.add(button2);
-		panel.add(button3);
+		panel.add(usersBtn);
+		panel.add(budgetsBtn);
 		
 		this.setTitle("Tela Principal");
-		this.setSize(1000, 700);
+		this.setSize(650, 400);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
 
@@ -42,16 +40,15 @@ public class Menu extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == button1){
+		if (e.getSource() == usersBtn){
 			this.dispose();
-		} else if (e.getSource() == button2){
+			UserWindow userWindow = new UserWindow();
+		} else if (e.getSource() == budgetsBtn){
 			this.dispose();
-		} else if (e.getSource() == button3){
-			this.dispose();
+			BudgetWindow budgetWindow = new BudgetWindow();
 		} else {
 			System.out.println("Error");
 		}
-		
 	}
 	
     

@@ -1,19 +1,28 @@
 package control;
 
-import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Iterator;
 import model.User;
 
 public class ControllerUser {
-    private HashSet<User> users;
+    private LinkedList<User> users;
 
     public ControllerUser() {
-        this.users = new HashSet<User>();
+        this.users = new LinkedList<User>();
     }
 
-    public void createUser(){
-        User user = new User();
+    public LinkedList<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(LinkedList<User> users) {
+        this.users = users;
+    }
+
+    public User createUser(String id, String name, String email){
+        User user = new User(id, name, email);
         this.users.add(user);
+        return user;
     }
 
     public void readUsers(){
