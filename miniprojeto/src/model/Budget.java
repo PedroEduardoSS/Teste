@@ -3,15 +3,15 @@ package model;
 import java.util.ArrayList;
 
 /**
- * Classe Budget cria um novo orçamento no sistema.
- * Seis parâmetros serão utilizados pelas classes 
- * @param id -> String que representa a identificação do orçamento
- * @param title -> String que representa o título do orçamento
+ * Classe Budget cria um novo orcamento no sistema.
+ * Seis parametros serao utilizados pelas classes 
+ * @param id -> String que representa a identificacao do orcamento
+ * @param title -> String que representa o titulo do orcamento
  * @param products -> ArrayList que armazena objetos da classe Product
  * @param services -> ArrayList que armazena objetos da classe Service
- * @param totalPrice -> Double que representa o valor total (precisa dos parâmetros
+ * @param totalPrice -> Double que representa o valor total (precisa dos parametros
  * products e services para atualizar)
- * @param user -> Associaçao da classe User
+ * @param user -> Associacao da classe User
  * @author Pedro Eduardo Santos Sousa
  */
 

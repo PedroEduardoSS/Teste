@@ -5,9 +5,9 @@ import java.util.Iterator;
 import model.*;
 
 /**
- * Classe ControllerBudget cria uma nova instância para manipular dados do orçamento.
- * Somente o método createUser() tem 
- * @param budgets -> ArrayList que armazena objetos do tipo Budget (sem conexão com a interface gráfica)
+ * Classe ControllerBudget cria uma nova instancia para manipular dados do orcamento.
+ * Somente os metodo createUser() e updatePrice tem conexao com a interface grafica.
+ * @param budgets -> ArrayList que armazena objetos do tipo Budget (sem conexao com a interface grafica)
  * @author Pedro Eduardo Santos Sousa
  */
 

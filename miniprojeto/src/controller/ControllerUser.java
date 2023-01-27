@@ -5,9 +5,9 @@ import java.util.Iterator;
 import model.User;
 
 /**
- * Classe ControllerUser cria uma nova instância para manipular dados do usuário.
- * Somente o método createUser() tem conexão com a interface gráfica. 
- * @param users -> LinkedList que armazena objetos do tipo User (sem conexão com a interface gráfica)
+ * Classe ControllerUser cria uma nova instancia para manipular dados do usuario.
+ * Somente o método createUser() tem conexão com a interface grafica. 
+ * @param users -> LinkedList que armazena objetos do tipo User (sem conexao com a interface grafica)
  * @author Pedro Eduardo Santos Sousa
  */
 
@@ -35,7 +35,7 @@ public class ControllerUser {
     }
 
     /**
-     * Cria um novo usuário e adiciona em users.
+     * Cria um novo usuario e adiciona em users.
      * @param id
      * @param name
      * @param email
@@ -48,7 +48,7 @@ public class ControllerUser {
     }
 
     /**
-     * Imprime determinado usuário com base no parâmetro idUser.
+     * Imprime determinado usuario com base no parametro idUser.
      * @param idUser
      */    
     public void readUser(String idUser){
@@ -60,7 +60,7 @@ public class ControllerUser {
     }
 
     /**
-     * Deleta determinado usuário com base no parâmetro idUser.
+     * Deleta determinado usuario com base no parametro idUser.
      * @param idUser
      */
     public void deleteUser(String idUser){

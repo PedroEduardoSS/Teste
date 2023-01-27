@@ -1,10 +1,10 @@
 package model;
 /**
- * Classe Item é uma classe abstrata que será herdada das classes
- * Product e Service. Três parâmetros são utilizados pelas classes herdeiras.
+ * Classe Item e uma classe abstrata que sera herdada das classes
+ * Product e Service. Tres parametros sao utilizados pelas classes herdeiras.
  * @param nameItem -> String que representa o nome do item
- * @param info -> String que representa breve informação do item
- * @param price -> Double que representa preço do item
+ * @param info -> String que representa breve informacao do item
+ * @param price -> Double que representa preco do item
  * @author Pedro Eduardo Santos Sousa
  */
 abstract class Item {

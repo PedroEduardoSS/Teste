@@ -1,10 +1,10 @@
 package model;
 /**
- * Classe User cria um novo usuário no sistema e recebe
- * três parâmetros no construtor.
- * @param id -> String que representa a identificação do usuário
- * @param name -> String que representa o nome do usuário
- * @param email -> String que representa o email do usuário
+ * Classe User cria um novo usuario no sistema e recebe
+ * tres parametros no construtor.
+ * @param id -> String que representa a identificacao do usuario
+ * @param name -> String que representa o nome do usuario
+ * @param email -> String que representa o email do usuario
  * @author Pedro Eduardo Santos Sousa
  */
 public class User {

@@ -1,12 +1,12 @@
 package model;
 /**
- * Classe Service cria um novo Serviço dentro de um orçamento
- * e recebe quatro parâmetros no construtor e herda da classe
+ * Classe Service cria um novo Servico dentro de um orcamento
+ * e recebe quatro parametros no construtor e herda da classe
  * Item.
  * @param nameItem -> String que representa o nome do item
- * @param info -> String que representa breve informação do item
- * @param price -> Double que representa preço do item
- * @param deadline -> Integer que representa o prazo do serviço
+ * @param info -> String que representa breve informacao do item
+ * @param price -> Double que representa preco do item
+ * @param deadline -> Integer que representa o prazo do servico
  * @author Pedro Eduardo Santos Sousa
  */
 public class Service extends Item{
