@@ -1,12 +1,12 @@
 package view;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+
+import controller.*;
 import model.*;
-import control.*;
 
 public class BudgetWindow extends JFrame implements ActionListener {
 	private ControllerBudget ctrlBudget = new ControllerBudget();
@@ -22,9 +22,6 @@ public class BudgetWindow extends JFrame implements ActionListener {
 	private BudgetData budgetData = new BudgetData();
 
 	private static JButton backBtn = new JButton("<-");
-
-	ArrayList<Service> listTempService = new ArrayList<>(100);
-	ArrayList<Product> listTempProduct = new ArrayList<>(100);
 
     public BudgetWindow(){
 		this.setLayout(new GridLayout(2, 1));
@@ -68,11 +65,16 @@ public class BudgetWindow extends JFrame implements ActionListener {
 		this.add(panelBottom);
     }
 
-    @Override
+	
+	/** 
+	 * @param e
+	 */
+	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == createBtn){
-			ArrayList<Product> listProduct = new ArrayList<>();
-			ArrayList<Service> listService = new ArrayList<>();
+			ArrayList<Product> listProduct = new ArrayList<>(100);
+			ArrayList<Service> listService = new ArrayList<>(100);
+
 			this.budgetData.listModel.addElement(ctrlBudget.createBudget(
 			this.budgetForm.idTextField.getText(),
 			this.budgetForm.titleTextField.getText(),
@@ -116,48 +118,62 @@ public class BudgetWindow extends JFrame implements ActionListener {
 				this.budgetData.listModel.remove(idx3);
 			}
 		} else if (e.getSource() == addItemBtn){
-			int idx4 = this.budgetData.budgetslist.getSelectedIndex();
 
+			int idx4 = this.budgetData.budgetslist.getSelectedIndex();
+			
 			if(idx4 != -1){
 				if (this.budgetForm.categBox.getSelectedItem() == "Serviço"){
-					listTempService.add(new Service(
+					ArrayList<Service> listServices =
+					this.budgetData.budgetslist.getSelectedValue().getServices();
+				
+					listServices.add(new Service(
 						this.budgetForm.nameItemTextField.getText(),
 						this.budgetForm.infoTextField.getText(),
 						Double.valueOf(this.budgetForm.priceTextField.getText()),
 						Integer.valueOf(this.budgetForm.qtdOrDLineTextField.getText())));
-
+	
 				} else if (this.budgetForm.categBox.getSelectedItem() == "Produto") {
-					listTempProduct.add(new Product(
+					ArrayList<Product> listProducts =
+					this.budgetData.budgetslist.getSelectedValue().getProducts();
+					
+					listProducts.add(new Product(
 						this.budgetForm.nameItemTextField.getText(),
 						this.budgetForm.infoTextField.getText(),
 						Double.valueOf(this.budgetForm.priceTextField.getText()),
 						Integer.valueOf(this.budgetForm.qtdOrDLineTextField.getText())
 					));
 				} else {
-					JOptionPane.showMessageDialog(null,
+					JOptionPane.showMessageDialog(this,
 					"Selecione uma categoria",
 					"Categoria",
 					JOptionPane.WARNING_MESSAGE);
 				}
-				this.budgetData.listModel.setElementAt(
-				new Budget(
-					this.budgetForm.idTextField.getText(),
-					this.budgetForm.titleTextField.getText(),
-					listTempProduct,
-					listTempService,
-					this.budgetForm.idUserTextField.getText(),
-					this.budgetForm.nameUserTextField.getText(),
-					this.budgetForm.emailUserTextField.getText()), idx4);
+			
+				ArrayList<Service> listServices =
+				this.budgetData.budgetslist.getSelectedValue().getServices();
+				
+				ArrayList<Product> listProducts =
+				this.budgetData.budgetslist.getSelectedValue().getProducts();
+				
+				this.budgetData.budgetslist.getSelectedValue().
+				setTotalPrice(ctrlBudget.updatePrice(listServices, listProducts));
+				
+				this.budgetData.budgetslist.updateUI();
 			}
+
 		} else if (e.getSource() == searchBtn){
-			int id = Integer.valueOf(this.budgetForm.idUserTextField.getText());
+
+			for (int i = 0; i < this.budgetData.listModel.getSize(); i++){
+				if (this.budgetForm.idUserTextField.getText()
+				.equals(this.budgetData.budgetslist.getModel().getElementAt(i).getUser().getId())){
+					JOptionPane.showMessageDialog(this,
+					this.budgetData.budgetslist.getModel().getElementAt(i),
+					"Info do Orçamento",
+					JOptionPane.INFORMATION_MESSAGE);
+				}
+			}
 			
-			JOptionPane.showMessageDialog(null,
-				this.budgetData.listModel.getElementAt(id),
-				"Info do Orçamento",
-				JOptionPane.INFORMATION_MESSAGE);
-			
-			System.out.println();
+		
 		} else if (e.getSource() == backBtn){
 			this.dispose();
 			Menu menuWindow = new Menu();

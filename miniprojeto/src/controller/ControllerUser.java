@@ -1,8 +1,15 @@
-package control;
+package controller;
 
 import java.util.LinkedList;
 import java.util.Iterator;
 import model.User;
+
+/**
+ * Classe ControllerUser cria uma nova instância para manipular dados do usuário.
+ * Somente o método createUser() tem conexão com a interface gráfica. 
+ * @param users -> LinkedList que armazena objetos do tipo User (sem conexão com a interface gráfica)
+ * @author Pedro Eduardo Santos Sousa
+ */
 
 public class ControllerUser {
     private LinkedList<User> users;
@@ -11,26 +18,39 @@ public class ControllerUser {
         this.users = new LinkedList<User>();
     }
 
+    
+    /** 
+     * @return LinkedList<User>
+     */
     public LinkedList<User> getUsers() {
         return users;
     }
 
+    
+    /** 
+     * @param users
+     */
     public void setUsers(LinkedList<User> users) {
         this.users = users;
     }
 
+    /**
+     * Cria um novo usuário e adiciona em users.
+     * @param id
+     * @param name
+     * @param email
+     * @return User
+     */
     public User createUser(String id, String name, String email){
         User user = new User(id, name, email);
         this.users.add(user);
         return user;
     }
 
-    public void readUsers(){
-        for (User i : this.users){
-            System.out.println(i);
-        }
-    }
-
+    /**
+     * Imprime determinado usuário com base no parâmetro idUser.
+     * @param idUser
+     */    
     public void readUser(String idUser){
         for (User o : this.users){
             if (o.getId() == idUser){
@@ -39,28 +59,10 @@ public class ControllerUser {
         }
     }
 
-    public void updateUser(String idUser, String data, int setAt){
-        for (User o : this.users){
-            if (o.getId() == idUser){
-                switch (setAt) {
-                    case 1:
-                        o.setName(data);
-                        break;
-                    
-                    case 2:
-                        o.setEmail(data);
-                        break;
-                
-                    default:
-                        o.setId(data);
-                        break;
-                }
-                System.out.println(o);
-            }
-            break;
-        }
-    }
-
+    /**
+     * Deleta determinado usuário com base no parâmetro idUser.
+     * @param idUser
+     */
     public void deleteUser(String idUser){
         Iterator<User> it = users.iterator();
         while(it.hasNext()) {

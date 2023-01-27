@@ -1,10 +1,7 @@
 package view;
 
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
-import model.*;
-import control.*;
 
 public class UserForm extends JPanel{
     JLabel title = new JLabel("Dados");

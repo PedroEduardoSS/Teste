@@ -2,6 +2,19 @@ package model;
 
 import java.util.ArrayList;
 
+/**
+ * Classe Budget cria um novo orçamento no sistema.
+ * Seis parâmetros serão utilizados pelas classes 
+ * @param id -> String que representa a identificação do orçamento
+ * @param title -> String que representa o título do orçamento
+ * @param products -> ArrayList que armazena objetos da classe Product
+ * @param services -> ArrayList que armazena objetos da classe Service
+ * @param totalPrice -> Double que representa o valor total (precisa dos parâmetros
+ * products e services para atualizar)
+ * @param user -> Associaçao da classe User
+ * @author Pedro Eduardo Santos Sousa
+ */
+
 public class Budget {
     private String id;
     private String title;
@@ -10,8 +23,14 @@ public class Budget {
     private double totalPrice;
     private User user;
 
-    public Budget(String id, String title, ArrayList<Product> products, ArrayList<Service> services,
-    String userId, String userName, String userEmail){
+    public Budget(
+    String id,
+    String title,
+    ArrayList<Product> products,
+    ArrayList<Service> services,
+    String userId,
+    String userName,
+    String userEmail){
         this.id = id;
         this.title = title;
         this.user = new User(userId, userName, userEmail);
@@ -81,19 +100,10 @@ public class Budget {
     // Methods
     @Override
     public String toString(){
-        return "ID: "+this.id+", Titulo: "+this.title+",\nProdutos"+this.products+
-        ",\nServiços: "+this.services+",\nPreco Total: R$"+
+        return "ID: "+this.id+", Titulo: "+this.title+",\n Produtos"+this.products+
+        ",\n Serviços: "+this.services+",\n Preco Total: R$"+
         String.format("%.2f", getTotalPrice())+
         ", Cliente: "+getUser();
     }
 
-    public double updatePrice(){
-        for (Product i : this.products){
-            this.totalPrice += i.getPrice();
-        }
-        for (Service i : this.services){
-            this.totalPrice += i.getPrice();
-        }
-        return totalPrice;
-    }
 }

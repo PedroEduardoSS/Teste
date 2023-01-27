@@ -1,9 +1,16 @@
 package model;
-
+/**
+ * Classe User cria um novo usuário no sistema e recebe
+ * três parâmetros no construtor.
+ * @param id -> String que representa a identificação do usuário
+ * @param name -> String que representa o nome do usuário
+ * @param email -> String que representa o email do usuário
+ * @author Pedro Eduardo Santos Sousa
+ */
 public class User {
+    private String id;
     private String name;
     private String email;
-    private String id;
     
     public User(String id, String name, String email) {
         this.id = id;
@@ -36,7 +43,6 @@ public class User {
     }
 
 
-    // Methods
     @Override
     public String toString(){
         return "Id: "+this.id+", Nome: "+this.name+", Email: "+this.email;

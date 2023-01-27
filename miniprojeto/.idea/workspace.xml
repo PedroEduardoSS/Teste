@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0fa33c69-f98f-411e-bab4-fb0c48686ba7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/control/ControllerBudget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/control/ControllerUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/model/Budget.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/model/Budget.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/model/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/model/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/model/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/model/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/test/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/view/BudgetData.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/view/BudgetData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/view/BudgetForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/view/BudgetForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/view/BudgetWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/view/BudgetWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/view/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/view/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/view/UserData.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/view/UserData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/view/UserForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/view/UserForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/view/UserWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/view/UserWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/ControllerBudget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/ControllerUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Budget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Budget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/BudgetData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/BudgetData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/BudgetForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/BudgetForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/BudgetWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/BudgetWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/UserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/UserForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/UserForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/UserWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/UserWindow.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KvG1L894b0vICMnmTUQV9ylElP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Pedro/Documents/repos/Teste/miniprojeto"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0fa33c69-f98f-411e-bab4-fb0c48686ba7" name="Changes" comment="" />
+      <created>1674847428394</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674847428394</updated>
+    </task>
+    <servers />
+  </component>
+</project>

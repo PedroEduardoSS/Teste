@@ -2,11 +2,10 @@ package view;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.util.ArrayList;
-
 import javax.swing.*;
+
+import controller.*;
 import model.*;
-import control.*;
 
 public class UserWindow extends JFrame implements ActionListener{
 	private static JLabel title = new JLabel("Usuarios");
@@ -63,7 +62,11 @@ public class UserWindow extends JFrame implements ActionListener{
 		this.add(panelBottom);
     }
 
-    @Override
+    
+	/** 
+	 * @param e
+	 */
+	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == createBtn){
 			this.userData.listModel.addElement(ctrlUser.createUser(

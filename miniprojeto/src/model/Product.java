@@ -1,5 +1,14 @@
 package model;
-
+/**
+ * Classe Product cria um novo Produto dentro de um orçamento
+ * e recebe quatro parâmetros no construtor e herda da classe
+ * Item.
+ * @param nameItem -> String que representa o nome do item
+ * @param info -> String que representa breve informação do item
+ * @param price -> Double que representa preço do item
+ * @param quantity -> Integer que representa a quantidade de produtos
+ * @author Pedro Eduardo Santos Sousa
+ */
 public class Product extends Item{
     private int quantity;
 
@@ -16,14 +25,6 @@ public class Product extends Item{
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
-    }
-
-    // Methods
-    public double multiplyPrice(){
-        if (getQuantity() > 1) {
-            this.price *= getQuantity();
-        }
-        return this.price;
     }
 
     @Override

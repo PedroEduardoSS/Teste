@@ -1,46 +1,49 @@
 package view;
 
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
 import model.*;
-import control.*;
 
 public class UserData extends JPanel implements ListSelectionListener{
-    private static JLabel viewData = new JLabel("Resultados");
-    DefaultListModel<Object> listModel;
-    JList<Object> userslist;
+    DefaultListModel<User> listModel;
+    JList<User> userslist;
     private JScrollPane scrollPane;
 
     public UserData(){
-        this.listModel = new DefaultListModel<Object>();
-        this.userslist = new JList<Object>(listModel);
+        // Dados pré-selecionado
+        User user1 = new User("001", "Turing", "turing@email.com");
+        User user2 = new User("002", "Beren", "beren@email.com");
+        User user3 = new User("003", "Maedros", "maedros@email.com");
+
+        // Painel para mostrar os dados
+        this.listModel = new DefaultListModel<User>();
+        this.userslist = new JList<User>(listModel);
         this.userslist.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        
+        this.listModel.addElement(user1);
+        this.listModel.addElement(user2);
+        this.listModel.addElement(user3);
+        
         this.scrollPane = new JScrollPane(userslist);
-        this.setLayout(new GridLayout(2, 1));
+        this.setLayout(new GridLayout(1, 1));
         this.setSize(new Dimension(150, 550));
         this.setVisible(true);
 
         this.scrollPane.setSize(new Dimension(150, 500));
         this.userslist.addListSelectionListener(this);
 
-        this.add(viewData);
         this.add(scrollPane);
     }
 
+    
+    /** 
+     * @param e
+     */
     @Override
     public void valueChanged(ListSelectionEvent e) {
-        /*int idx = userslist.getSelectedIndex();
-
-        if(idx != -1){
-            JOptionPane.showMessageDialog(scrollPane,
-            userslist.getSelectedValue(),
-            "Info do Usuário",
-            JOptionPane.INFORMATION_MESSAGE);
-        }*/
-        
+        userslist.getSelectedValue();
     }
 }

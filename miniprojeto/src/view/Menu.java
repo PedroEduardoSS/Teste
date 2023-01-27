@@ -3,8 +3,6 @@ package view;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import model.*;
-import control.*;
 
 public class Menu extends JFrame implements ActionListener {
 	private static JLabel title = new JLabel("Menu Principal");
@@ -38,6 +36,10 @@ public class Menu extends JFrame implements ActionListener {
 		this.add(panel);
     }
 
+	
+	/** 
+	 * @param e
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == usersBtn){
