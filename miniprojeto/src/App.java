@@ -1,3 +1,4 @@
+import test.AppTest;
 import view.*;
 
 public class App {
@@ -7,9 +8,11 @@ public class App {
      */
     public static void main(String[] args) {
         Menu menuWindow = new Menu();
-        /*
+        
         AppTest test = new AppTest();
         test.checkCreateUser();
-        test.checkCreateBudget();*/
+        test.checkCreateBudget();
+        test.checkUpdatePrice();
+        
     }
 }

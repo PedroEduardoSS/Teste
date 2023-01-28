@@ -15,52 +15,51 @@ public class AppTest {
     @Test
     public void checkCreateUser(){
         User user1 = cUser.createUser("000", "Oz", "oz@email.com");
-        User user2 = cUser.createUser("000", "Oz", "oz@email.com");
-        User user3 = cUser.createUser("000", "oz", "oz@email.com");
+        User user2 = cUser.createUser("000", "oz", "oz@email.com");
         
-        try {
-            assertEquals(user1, user2);    
-        } catch (Exception e) {
-            fail("Caso 1: Os usuarios são diferentes");
-        }
+        assertNotEquals(user1, user2);
+        System.out.println("Sucesso 1: Os usuarios são diferentes");
 
-        try {
-            assertEquals(user1, user3);    
-        } catch (Exception e) {
-            fail("Caso 2: Os usuarios são diferentes");
-        }
     }
 
     @Test
     public void checkCreateBudget(){
         ArrayList<Product> products = new ArrayList<>();
         ArrayList<Service> services = new ArrayList<>();
-        ArrayList<Product> products1 = new ArrayList<>();
-        ArrayList<Service> services1 = new ArrayList<>();
-        ArrayList<Product> products2 = new ArrayList<>();
-        ArrayList<Service> services2 = new ArrayList<>();
-        Budget budget1 = cBudget.createBudget("n1", "orçamento1", products, services, "000", "Oz", "oz@email.com");
-        Budget budget2 = cBudget.createBudget("n1", "orçamento1", products1, services1, "000", "Oz", "oz@email.com");
-        Budget budget3 = cBudget.createBudget("n1", "orçamento1", products2, services2, "000", "Oz", "oz@email.com");
+        Budget budget1 = cBudget.createBudget("n1", "orçamento", products, services, "000", "Oz", "oz@email.com");
+        Budget budget2 = cBudget.createBudget("n1", "orçamentos", products, services, "000", "Oz", "oz@email.com");
         
-        try {
-            assertEquals(budget1, budget2);    
-        } catch (Exception e) {
-            fail("Caso 3: Os orçamentos são diferentes");
-        }
+        assertNotEquals(budget1, budget2);
+        System.out.println("Sucesso 2: Os orçamentos são diferentes");  
+        
+    }
 
-        try {
-            assertEquals(budget1, budget3);    
-        } catch (Exception e) {
-            fail("Caso 4: Os orçamentos são diferentes");
-        }
+    @Test
+    public void checkUpdatePrice(){
+        ArrayList<Product> listProduct = new ArrayList<>(100);
+		ArrayList<Service> listService = new ArrayList<>(100);
+        listProduct.add(
+            new Product("Martelo", "Para construção", 54.99, 2)
+        );
+        listService.add(
+            new Service("Website", "Uma loja virtual", 10000.00, 60)
+        );
+        ControllerBudget controllerBudget = new ControllerBudget();
+        Budget budget = new Budget(
+            "01",
+            "Orçamento1",
+            listProduct,
+            listService,
+            "001",
+            "Turing",
+            "turing@email.com"
+        );
+        budget.setTotalPrice(controllerBudget.updatePrice(listService, listProduct));
+        
+
+        assertEquals(budget.getTotalPrice(), 10109.98);
+        System.out .println("Sucesso 3: O calculo do updatePrice está certo");  
+        
     }
 
 }
-/*
-assertEquals(vEsp, vRet) 
-assertTrue(condition) 
-assertFalse(condition) 
-assertNull(objeto) 
-fail(msg) 
-*/

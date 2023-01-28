@@ -7,6 +7,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
 import model.*;
+import controller.ControllerBudget;
 
 public class BudgetData extends JPanel implements ListSelectionListener{
     DefaultListModel<Budget> listModel;
@@ -17,13 +18,25 @@ public class BudgetData extends JPanel implements ListSelectionListener{
         // Dados pré-selecionados
         ArrayList<Product> listProduct1 = new ArrayList<>(100);
 		ArrayList<Service> listService1 = new ArrayList<>(100);
+        listProduct1.add(
+            new Product("Martelo", "Para construção", 54.99, 2)
+        );
 
         ArrayList<Product> listProduct2 = new ArrayList<>(100);
 		ArrayList<Service> listService2 = new ArrayList<>(100);
+        listService2.add(
+            new Service("Website", "Uma loja virtual", 10000.00, 60)
+        );
 
         ArrayList<Product> listProduct3 = new ArrayList<>(100);
 		ArrayList<Service> listService3 = new ArrayList<>(100);
-        
+        listProduct3.add(
+            new Product("Computador", "Trabalhe e jogue", 5999.59, 1)
+        );
+        listService3.add(
+            new Service("Reforma", "Banheiro precisa mais espaço", 15000.00, 120)
+        );
+        ControllerBudget controllerBudget = new ControllerBudget();
         Budget budget1 = new Budget(
             "01",
             "Orçamento1",
@@ -33,6 +46,8 @@ public class BudgetData extends JPanel implements ListSelectionListener{
             "Turing",
             "turing@email.com"
         );
+        budget1.setTotalPrice(controllerBudget.updatePrice(listService1, listProduct1));
+        
         Budget budget2 = new Budget(
             "02",
             "Orçamento2",
@@ -42,6 +57,8 @@ public class BudgetData extends JPanel implements ListSelectionListener{
             "Beren",
             "beren@email.com"
         );
+        budget2.setTotalPrice(controllerBudget.updatePrice(listService2, listProduct2));
+        
         Budget budget3 = new Budget(
             "03",
             "Orçamento3",
@@ -51,6 +68,7 @@ public class BudgetData extends JPanel implements ListSelectionListener{
             "Maedros",
             "maedros@email.com"
         );
+        budget3.setTotalPrice(controllerBudget.updatePrice(listService3, listProduct3));
 
         // Painel para mostrar dados
         this.listModel = new DefaultListModel<Budget>();
