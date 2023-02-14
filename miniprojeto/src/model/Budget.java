@@ -23,14 +23,14 @@ public class Budget {
     private double totalPrice;
     private User user;
 
-    public Budget(
-    String id,
-    String title,
-    ArrayList<Product> products,
-    ArrayList<Service> services,
-    String userId,
-    String userName,
-    String userEmail){
+    public Budget( String id,
+                    String title,
+                    ArrayList<Product> products,
+                    ArrayList<Service> services,
+                    String userId,
+                    String userName,
+                    String userEmail
+    ){
         this.id = id;
         this.title = title;
         this.user = new User(userId, userName, userEmail);
